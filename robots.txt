@@ -3,4 +3,5 @@
 # Keep robots from crawling old Druid doc versions
 
 User-agent: *
-Disallow: /docs/0*/
+#Disallow: /docs/0*/
+Allow: /*
