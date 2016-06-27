@@ -4,11 +4,11 @@ layout: doc_page
 TopN queries
 ==================
 
-TopN queries return a sorted set of results for the values in a given dimension according to some criteria. Conceptually, they can be thought of as an approximate [GroupByQuery](../querying/groupbyquery.html) over a single dimension with an [Ordering](../querying/limitspec.html) spec. TopNs are much faster and resource efficient than GroupBys for this use case. These types of queries take a topN query object and return an array of JSON objects where each object represents a value asked for by the topN query.
+TopN查询针对给定的维度，根据某些规则返回一组有序的结果集。从概念上来说，它可以被近似看做带有[排序](../querying/limitspec.html)特性的单维度的[GroupBy查询]。TopN在这种场景下比GroupBy高效得多，且资源消耗更少。这种类型的查询使用一个topN查询对象，放回一组JSON对象，其中每个对象表示一个topN查询请求的值。
 
-TopNs are approximate in that each node will rank their top K results and only return those top K results to the broker. K, by default in Druid, is `max(1000, threshold)`. In practice, this means that if you ask for the top 1000 items ordered, the correctness of the first ~900 items will be 100%, and the ordering of the results after that is not guaranteed. TopNs can be made more accurate by increasing the threshold.
+TopN近似于在每个节点排出它们的K个top结果，然后仅返回这K个结果至broker节点。K，在Druid中的默认值为`max(1000, threshold)`。在实践中，这意味着如果你请求top 1000个有序项，前900个项的准确率为100%，而无法保证这之后的结果项的顺序。通过调整这个阈值，可以是TopN的结果更加准确。
 
-A topN query object looks like:
+一个典型的topN查询对象如下所示:
 
 ```json
 {
@@ -156,7 +156,7 @@ Users wishing to get an *exact rank and exact aggregates* topN over a dimension 
 
 Users who can tolerate *approximate rank* topN over a dimension with greater than 1000 unique values, but require *exact aggregates* can issue two queries. One to get the approximate topN dimension values, and another topN with dimension selection filters which only use the topN results of the first.
 
-#### Example First query:
+#### 查询示例1:
 
 ```json
 {
@@ -179,7 +179,7 @@ Users who can tolerate *approximate rank* topN over a dimension with greater tha
 }
 ```
 
-#### Example second query:
+#### 查询示例2:
 
 ```json
 {
