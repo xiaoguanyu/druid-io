@@ -10,13 +10,13 @@
     * [加载Kafka数据](../tutorials/tutorial-kafka.html)
   * [集群模式](../tutorials/cluster.html)
 
-## 数据加载
+## 数据接入
   * [数据格式](../ingestion/data-formats.html)
   * [数据模式](../ingestion/index.html)
   * [设计数据模式](../ingestion/schema-design.html)
-  * [改变数据模式](../ingestion/schema-changes.html)
-  * [文件数据批量加载](../ingestion/batch-ingestion.html)
-  * [流数据加载](../ingestion/stream-ingestion.html)
+  * [修改数据模式](../ingestion/schema-changes.html)
+  * [文件数据批量接入](../ingestion/batch-ingestion.html)
+  * [流数据接入](../ingestion/stream-ingestion.html)
     * [推送流数据](../ingestion/stream-push.html)
     * [拉取流数据](../ingestion/stream-pull.html)
   * [更新已存在数据](../ingestion/update-existing-data.html)
@@ -40,7 +40,7 @@
     * [Granularities](../querying/granularities.html)
     * [DimensionSpecs](../querying/dimensionspecs.html)
     * [Context](../querying/query-context.html)
-  * [多值dimensions](../querying/multi-value-dimensions.html)
+  * [多值维度](../querying/multi-value-dimensions.html)
   * [SQL](../querying/sql.html)
   * [Joins](../querying/joins.html)
   * [多租户](../querying/multitenancy.html)
