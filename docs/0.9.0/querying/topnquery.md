@@ -70,7 +70,7 @@ TopN近似于在每个节点排出它们的K个top结果，然后仅返回这K�
 }
 ```
 
-There are 11 parts to a topN query.
+一个topN查询共有11部分。
 
 |property|description|required?|
 |--------|-----------|---------|
@@ -86,8 +86,8 @@ There are 11 parts to a topN query.
 |metric|A String or JSON object specifying the metric to sort by for the top list. For more info, see [TopNMetricSpec](../querying/topnmetricspec.html).|yes|
 |context|See [Context](../querying/query-context.html)|no|
 
-Please note the context JSON object is also available for topN queries and should be used with the same caution as the timeseries case.
-The format of the results would look like so:
+值得注意的是，context对象同样可以用于topN查询，使用方式与timeseries的情况相同。
+返回结果的格式如下所示:
 
 ```json
 [
@@ -156,7 +156,7 @@ Users wishing to get an *exact rank and exact aggregates* topN over a dimension 
 
 Users who can tolerate *approximate rank* topN over a dimension with greater than 1000 unique values, but require *exact aggregates* can issue two queries. One to get the approximate topN dimension values, and another topN with dimension selection filters which only use the topN results of the first.
 
-#### Example First query:
+#### 查询示例 1:
 
 ```json
 {
@@ -179,7 +179,7 @@ Users who can tolerate *approximate rank* topN over a dimension with greater tha
 }
 ```
 
-#### Example second query:
+#### 查询示例 2:
 
 ```json
 {
