@@ -43,7 +43,7 @@ cd druid-0.9.0
 
 ## 启动Zookeeper
 
-目前,Druid需要依赖 [Apache ZooKeeper](http://zookeeper.apache.org/) 进行分布式协调。你需要下载核运行Zookeeper。
+目前,Druid需要依赖 [Apache ZooKeeper](http://zookeeper.apache.org/) 进行分布式协调。你需要下载并运行Zookeeper。
 
 ```bash
 curl http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz -o zookeeper-3.4.6.tar.gz
