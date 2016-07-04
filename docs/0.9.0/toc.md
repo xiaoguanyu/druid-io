@@ -3,7 +3,7 @@
 
 ## 入门指南
   * [概念](../design/)
-  * [快速启动](../tutorials/quickstart.html)
+  * [快速入门](../tutorials/quickstart.html)
   * [加载数据](../tutorials/ingestion.html)
     * [加载文件数据](../tutorials/tutorial-batch.html)
     * [加载流数据](../tutorials/tutorial-streams.html)
